@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-class TodoItems extends React.Component {
+class Products extends React.Component {
     constructor(props) {
         super(props)
         this.handleClick = this.handleClick.bind(this)
@@ -18,9 +18,9 @@ class TodoItems extends React.Component {
                         <thead>
                             <tr>
                                 <th scope="col">Status</th>
-                                <th scope="col">Item</th>
-                                <th scope="col" className="text-right">
-                                    Actions
+                                <th scope="col">Title</th>
+                                <th scope="col">
+                                    Description
                                 </th>
                             </tr>
                         </thead>
@@ -31,7 +31,7 @@ class TodoItems extends React.Component {
         )
     }
 }
-export default TodoItems
+export default Products
 
 Products.propTypes = {
 }

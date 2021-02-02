@@ -1,11 +1,11 @@
-class CreateTodoItems < ActiveRecord::Migration[6.0]
+class CreateProducts < ActiveRecord::Migration[6.0]
   def change
-    create_table :todo_items do |t|
+    create_table :products do |t|
       t.string :title
       t.references :user, null: false, foreign_key: true
       t.string :description
       t.integer :type
-      t.boolean :complete, default: false
+      t.float :price
 
       t.timestamps
     end

@@ -8,7 +8,7 @@ class Product extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            complete: this.props.todoItem.complete,
+            complete: this.props.product.complete,
         }
         this.handleDestroy = this.handleDestroy.bind(this)
         this.handleChange = this.handleChange.bind(this)
@@ -21,7 +21,7 @@ class Product extends React.Component {
         this.setState({
             complete: this.completedRef.current.checked,
         })
-        this.updateTodoItem()
+        this.updateProduct()
     }
     handleDestroy() {
         setAxiosHeaders()
@@ -89,7 +89,7 @@ class Product extends React.Component {
     }
 }
 
-export default TodoItem
+export default Product
 
 Product.propTypes = {
     product: PropTypes.object.isRequired,
